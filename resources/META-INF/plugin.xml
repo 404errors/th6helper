@@ -1,0 +1,46 @@
+<idea-plugin>
+  <id>com.synergix.th6helper</id>
+  <name>TH6Helper</name>
+  <version>1.0</version>
+  <vendor email="kevin.nguyen@synergixtech.com" url="http://www.synergixtech.com">Synergixtech</vendor>
+
+  <description><![CDATA[
+      Disable unnecessary scheduled job in development phase, automatically create run configuration<br>
+      <em>most HTML tags may be used</em>
+    ]]></description>
+
+  <change-notes><![CDATA[
+      Add change notes here.<br>
+      <em>most HTML tags may be used</em>
+    ]]>
+  </change-notes>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="173.0"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products
+  <depends>com.intellij.modules.lang</depends>
+  -->
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <actions>
+    <!-- Add your actions here -->
+      <group id="TH6Helper.TH6HelperMenu" text="TH6Helper" description="TH6 Helper">
+          <add-to-group group-id="MainMenu" anchor="last" />
+          <action id="TH6Helper.CommonFilesDisabler" class="com.synergix.th6helper.CommonFilesDisabler" text="Disable common files"
+                  description="Scheduled job, emlocator..."/>
+          <!--
+          <action id="TH6Helper.CreateRunConfiguration" class="com.synergix.th6helper.CreateRunConfiguration" text="Create Run Configuration"
+                  description="Create necessary run configuration"/>
+            -->
+      </group>
+
+
+  </actions>
+
+</idea-plugin>
