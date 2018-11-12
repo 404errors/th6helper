@@ -39,9 +39,11 @@ public class CommonFilesDisabler extends AnAction {
 		String line = null;
 		try {
 			BufferedReader bufferedReader = Files.newBufferedReader(absoluteFilePath);
+			boolean toBeIgnored = false;
 			while ((line = bufferedReader.readLine()) != null) {
 				if (line.trim().startsWith(pattern)) {
 					line = "//" + line;
+					toBeIgnored = true;
 				}
 				lines.add(line);
 			}
@@ -54,6 +56,9 @@ public class CommonFilesDisabler extends AnAction {
 				bufferedWriter.flush();
 			}
 			bufferedWriter.close();
+			if (toBeIgnored) {
+				CommandLineUtils.ignoreFile(absoluteFilePath.toAbsolutePath().toString());
+			}
 
 		} catch (IOException e) {
 			System.out.println("Not a valid TH6 project");

@@ -32,7 +32,7 @@
     <!-- Add your actions here -->
       <group id="TH6Helper.TH6HelperMenu" text="TH6Helper" description="TH6 Helper">
           <add-to-group group-id="MainMenu" anchor="last" />
-          <action id="TH6Helper.CommonFilesDisabler" class="com.synergix.th6helper.CommonFilesDisabler" text="Disable common files"
+          <action id="TH6Helper.CommonFilesDisabler" class="com.synergix.th6helper.CommonFilesDisabler" text="Disable and ignore common files"
                   description="Scheduled job, emlocator..."/>
           <!--
           <action id="TH6Helper.CreateRunConfiguration" class="com.synergix.th6helper.CreateRunConfiguration" text="Create Run Configuration"
