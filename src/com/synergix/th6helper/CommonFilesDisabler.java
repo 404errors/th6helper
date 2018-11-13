@@ -18,8 +18,8 @@ public class CommonFilesDisabler extends AnAction {
 		String projectBasePath = actionEvent.getProject().getBasePath();
 		this.disabledScheduledJob(projectBasePath);
 		this.disableEmLocatorInitOnStartup(projectBasePath);
-
 	}
+
 
 
 
